@@ -1,0 +1,21 @@
+product_id,product_name,category,unit_price
+P001,Laptop,Electronics,1200.00
+P002,Smartphone,Electronics,800.00
+P003,Tablet,Electronics,500.00
+P004,Headphones,Electronics,150.00
+P005,Smartwatch,Electronics,300.00
+P006,Monitor,Electronics,400.00
+P007,Keyboard,Accessories,100.00
+P008,Mouse,Accessories,50.00
+P009,Webcam,Accessories,80.00
+P010,Speaker,Electronics,120.00
+P011,Router,Electronics,75.00
+P012,USB Cable,Accessories,25.00
+P013,Charger,Accessories,30.00
+P014,Phone Case,Accessories,20.00
+P015,Screen Protector,Accessories,15.00
+P016,Desk Chair,Furniture,250.00
+P017,Standing Desk,Furniture,500.00
+P018,Desk Lamp,Furniture,75.00
+P019,Notebook,Stationery,15.00
+P020,Pen Set,Stationery,25.00

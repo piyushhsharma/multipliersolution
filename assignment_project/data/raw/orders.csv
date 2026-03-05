@@ -1,0 +1,21 @@
+order_id,customer_id,product,amount,order_date,status
+1001,1,Laptop,1200.00,2023-02-01,completed
+1002,2,Smartphone,800.00,15/03/2023,done
+1003,3,Tablet,500.00,04-10-2023,pending
+1004,4,Headphones,150.00,2023-05-15,completed
+1005,5,Smartwatch,300.00,06/20/2023,canceled
+1006,1,Monitor,400.00,2023-07-01,completed
+1007,7,Keyboard,100.00,08/10/2023,pending
+1008,8,Mouse,50.00,09/15/2023,completed
+1009,9,Webcam,80.00,10-20-2023,refunded
+1010,10,Speaker,120.00,11/25/2023,completed
+1011,11,Router,75.00,12/05/2023,pending
+1012,12,USB Cable,25.00,12/20/2023,completed
+,13,Charger,30.00,01/10/2024,completed
+1014,14,Phone Case,20.00,02/15/2024,done
+1015,15,Screen Protector,15.00,03/01/2024,cancelled
+1016,1,Laptop,1250.00,03-15-2024,completed
+1017,2,Smartphone,850.00,04/01/2024,pending
+1018,3,Tablet,,05/10/2024,completed
+1019,4,Headphones,160.00,06/15/2024,refunded
+1020,5,Smartwatch,320.00,07/20/2024,completed

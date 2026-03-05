@@ -1,0 +1,16 @@
+customer_id,name,email,region,signup_date
+1,John Doe,john.doe@email.com,North America,2023-01-15
+2,Jane Smith,jane.smith@email.com,Europe,15/02/2023
+3,Bob Johnson,bob@johnson.com,Asia,03-15-2023
+4,Alice Williams,alice.williams@email.com,North America,2023-04-10
+5,Charlie Brown,charlie.brown@email.com,South America,05/20/2023
+1,John Doe,john.doe@EMAIL.COM,North America,2023-06-15
+7,Diana Prince,diana.prince@email.com,Europe,2023-07-01
+8,Bruce Wayne,,North America,08/12/2023
+9,Clark Kent,clark.kent.email.com,Asia,09/15/2023
+10,Peter Parker,peter.parker@email.com,  Europe,10-01-2023
+11,Tony Stark,tony.stark@,North America,11/05/2023
+12,Steve Rogers,steve.rogers@email.com,North America,2023-12-01
+13,Natasha Romanoff,natasha@romanoff.com,Europe,12/15/2023
+14,Thor Odinson,thor.odinson@email.com,Asia,2024-01-10
+15,Bruce Banner,bruce.banner@email.com,North America,02/14/2024

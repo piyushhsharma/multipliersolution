@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Data Analytics Dashboard</h1>
+            <div class="loading-indicator" id="loadingIndicator">
+                <div class="spinner"></div>
+                <span>Loading data...</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Error Message -->
+            <div class="error-message" id="errorMessage" style="display: none;">
+                <span id="errorText"></span>
+                <button onclick="hideError()">×</button>
+            </div>
+
+            <!-- Summary Cards -->
+            <section class="summary-section">
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <h3>Total Customers</h3>
+                        <div class="summary-value" id="totalCustomers">-</div>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Total Orders</h3>
+                        <div class="summary-value" id="totalOrders">-</div>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Total Revenue</h3>
+                        <div class="summary-value" id="totalRevenue">-</div>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Avg Order Value</h3>
+                        <div class="summary-value" id="avgOrderValue">-</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Revenue Trend Chart -->
+            <section class="chart-section">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h2>Monthly Revenue Trend</h2>
+                        <div class="chart-controls">
+                            <input type="text" id="dateFilter" placeholder="Filter by month (YYYY-MM)">
+                            <button onclick="filterRevenueChart()">Filter</button>
+                            <button onclick="resetRevenueChart()">Reset</button>
+                        </div>
+                    </div>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Top Customers Table -->
+            <section class="table-section">
+                <div class="table-container">
+                    <div class="table-header">
+                        <h2>Top Customers</h2>
+                        <div class="table-controls">
+                            <input type="text" id="customerSearch" placeholder="Search customers...">
+                            <button onclick="searchCustomers()">Search</button>
+                            <button onclick="resetCustomerSearch()">Reset</button>
+                        </div>
+                    </div>
+                    <div class="table-wrapper">
+                        <table id="customersTable">
+                            <thead>
+                                <tr>
+                                    <th onclick="sortTable('name')">Name ↕</th>
+                                    <th onclick="sortTable('region')">Region ↕</th>
+                                    <th onclick="sortTable('total_spend')">Total Spend ↕</th>
+                                    <th onclick="sortTable('order_count')">Orders ↕</th>
+                                    <th onclick="sortTable('churned')">Status ↕</th>
+                                </tr>
+                            </thead>
+                            <tbody id="customersTableBody">
+                                <tr>
+                                    <td colspan="5" class="loading-row">Loading customer data...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category Performance Chart -->
+            <section class="chart-section">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h2>Category Performance</h2>
+                    </div>
+                    <canvas id="categoryChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Regional Analysis Table -->
+            <section class="table-section">
+                <div class="table-container">
+                    <div class="table-header">
+                        <h2>Regional Analysis</h2>
+                    </div>
+                    <div class="table-wrapper">
+                        <table id="regionsTable">
+                            <thead>
+                                <tr>
+                                    <th onclick="sortRegionsTable('region')">Region ↕</th>
+                                    <th onclick="sortRegionsTable('customer_count')">Customers ↕</th>
+                                    <th onclick="sortRegionsTable('order_count')">Orders ↕</th>
+                                    <th onclick="sortRegionsTable('total_revenue')">Revenue ↕</th>
+                                    <th onclick="sortRegionsTable('avg_revenue_per_customer')">Avg Revenue/Customer ↕</th>
+                                </tr>
+                            </thead>
+                            <tbody id="regionsTableBody">
+                                <tr>
+                                    <td colspan="5" class="loading-row">Loading regional data...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Data Analytics Dashboard. Built with FastAPI, Chart.js, and Vanilla JavaScript.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
